@@ -4,7 +4,9 @@
 
     docker rm -f $(docker ps -a -q)
 
-# Swarm Init
+# Swarm
+
+## init
 
     docker swarm init
 
@@ -12,16 +14,25 @@
 
     docker swarm join --token SWMTKN-xxxx xxx.xxx.xxx.xx:2377
 
-## 忘記 swarm join 以上指令怎麼辦?
+## 忘記 docker swarm join 以上指令怎麼辦?
 
+	docker swarm join-token worker
 
+## 部屬 Portainer 服務
 
+	docker pull portainer/portainer-ce:2.0.1
+	docker pull portainer/agent
+	docker stack deploy -c portainer.yml por
+
+## 打開 Portainer 服務
+
+http://127.0.0.1:9000
 
 ## create-mysql-volume:
 	docker volume create mysql
 
 ## create-network:
-	docker network create --scope=swarm --driver=overlay my_network
+	docker network create --scope=swarm --driver=overlay my_swarm_network
 
 ## deploy-mysql:
 	docker stack deploy --with-registry-auth -c mysql.yml mysql
