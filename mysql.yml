@@ -28,7 +28,7 @@ services:
   phpmyadmin:
     image: phpmyadmin:5.1.0  # 使用 phpMyAdmin 介面映像
     links: 
-      - mysql:db                   # 將 mysql 服務別名為 db（僅適用於 v2，不推薦）
+      - mysql:db                   # 將 mysql 服務別名為 db
     ports:
       - 8080:80                    # 對外開放 phpMyAdmin 介面為 8080
     environment:
