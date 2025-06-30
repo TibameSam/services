@@ -35,7 +35,7 @@ services:
 
 networks:
   agent_network:
-    driver: overlay           # 建立 overlay 網路，允許 container 跨節點互聯
+    driver: overlay           # 建立 overlay 網路，允許 container 跨 Node 節點互聯
 
 volumes:
   portainer_data:             # 定義一個 volume，用於持久化 portainer server 的資料
