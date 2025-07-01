@@ -40,3 +40,6 @@ http://127.0.0.1:9000
 ## deploy-rabbitmq:
 	docker stack deploy --with-registry-auth -c rabbitmq.yml rabbitmq
 
+## 離開 docker swarm
+	docker swarm leave --force
+
