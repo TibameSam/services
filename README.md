@@ -43,3 +43,12 @@ http://127.0.0.1:9000
 ## 離開 docker swarm
 	docker swarm leave --force
 
+## deploy-crawler:
+	DOCKER_IMAGE_VERSION=0.0.6 docker stack deploy --with-registry-auth -c docker-compose-worker-network-version-swarm.yml crawler
+
+## 發送任務:
+	DOCKER_IMAGE_VERSION=0.0.6 docker stack deploy --with-registry-auth -c docker-compose-producer-duplicate-network-version.yml crawler
+
+## 部屬 API:
+	DOCKER_IMAGE_VERSION=0.0.1 docker stack deploy --with-registry-auth -c docker-compose-api-network-version-swarm.yml api
+
