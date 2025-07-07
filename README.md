@@ -31,8 +31,12 @@ http://127.0.0.1:9000
 ## create-mysql-volume:
 	docker volume create mysql
 
+## remove-network
+	docker network rm my_swarm_network
+
 ## create-network:
 	docker network create --scope=swarm --driver=overlay my_swarm_network
+	docker network create --scope=swarm --driver=overlay --attachable my_swarm_network
 
 ## deploy-mysql:
 	docker stack deploy --with-registry-auth -c mysql.yml mysql
@@ -52,3 +56,5 @@ http://127.0.0.1:9000
 ## 部屬 API:
 	DOCKER_IMAGE_VERSION=0.0.1 docker stack deploy --with-registry-auth -c docker-compose-api-network-version-swarm.yml api
 
+## rm stack
+	docker stack rm airflow api crawler mysql rabbitmq
