@@ -71,3 +71,7 @@ http://127.0.0.1:9000
 
 ## 登入 docker
 	docker login -u linsamtw
+
+## upload_taiwan_stock_price_to_mysql
+	docker stack deploy --with-registry-auth -c docker-compose-upload_taiwan_stock_price_to_mysql.yml upload
+	
