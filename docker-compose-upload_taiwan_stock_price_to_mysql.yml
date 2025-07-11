@@ -9,7 +9,7 @@ services:
       mode: replicated
       replicas: 1
       placement:
-        constraints: [node.labels.upload_taiwan_stock_price_to_mysql == true]
+        constraints: [node.labels.upload == true]
     restart: on-failure  # 若容器停止或崩潰，自動重新啟動
     environment:
       - TZ=Asia/Taipei  # 設定時區為台北（UTC+8）
