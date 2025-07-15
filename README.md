@@ -74,4 +74,10 @@ http://127.0.0.1:9000
 
 ## upload_taiwan_stock_price_to_mysql
 	docker stack deploy --with-registry-auth -c docker-compose-upload_taiwan_stock_price_to_mysql.yml upload
-	
+
+## 設定 linode hostname
+	sudo hostname manager
+	sudo hostname mysql
+	sudo hostname rabbitmq
+	sudo hostname airflow
+
