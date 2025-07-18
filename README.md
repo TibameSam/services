@@ -81,3 +81,5 @@ http://127.0.0.1:9000
 	sudo hostname rabbitmq
 	sudo hostname airflow
 
+## 啟動 redash
+	docker stack deploy -c docker-compose-redash.yml redash
