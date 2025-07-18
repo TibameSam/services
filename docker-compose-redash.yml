@@ -16,7 +16,7 @@ services:
     ports:
       - target: 5000
         published: 5005
-        mode: host
+        mode: ingress
     # 相關的環境變數，包含
     deploy:
       mode: replicated
