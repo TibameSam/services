@@ -34,7 +34,7 @@ services:
       REDASH_COOKIE_SECRET: redash_cookie_secret
       REDASH_SECRET_KEY: redash_secret_key
       # postgres 的連線設定
-      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@postgres/postgres
+      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@redash_postgres/postgres
       # 允許在 redash 上使用 python
       REDASH_ADDITIONAL_QUERY_RUNNERS: redash.query_runner.python
       # worker 數量
@@ -70,7 +70,7 @@ services:
       POSTGRES_PASSWORD: postgres_password
       REDASH_COOKIE_SECRET: redash_cookie_secret
       REDASH_SECRET_KEY: redash_secret_key
-      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@postgres/postgres
+      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@redash_postgres/postgres
       REDASH_ADDITIONAL_QUERY_RUNNERS: redash.query_runner.python
       REDASH_WEB_WORKERS: 1
       # 修正 mysql 斷線問題
@@ -98,7 +98,7 @@ services:
       POSTGRES_PASSWORD: postgres_password
       REDASH_COOKIE_SECRET: redash_cookie_secret
       REDASH_SECRET_KEY: redash_secret_key
-      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@postgres/postgres
+      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@redash_postgres/postgres
       REDASH_ADDITIONAL_QUERY_RUNNERS: redash.query_runner.python
       # 這裡的 celery 就跟前面章節提到的
       # 分散式概念一樣
@@ -129,7 +129,7 @@ services:
       POSTGRES_PASSWORD: postgres_password
       REDASH_COOKIE_SECRET: redash_cookie_secret
       REDASH_SECRET_KEY: redash_secret_key
-      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@postgres/postgres
+      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@redash_postgres/postgres
       REDASH_ADDITIONAL_QUERY_RUNNERS: redash.query_runner.python
       # 負責處理 queue = scheduled_queries,schemas 類型的任務
       # 與本書中 7.6.3，crawler.yml 中的 -Q twse 概念一樣
@@ -159,7 +159,7 @@ services:
       POSTGRES_PASSWORD: postgres_password
       REDASH_COOKIE_SECRET: redash_cookie_secret
       REDASH_SECRET_KEY: redash_secret_key
-      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@postgres/postgres
+      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@redash_postgres/postgres
       REDASH_ADDITIONAL_QUERY_RUNNERS: redash.query_runner.python
       # 負責處理 queue = queries 類型的任務
       # 與本書中 7.6.3，crawler.yml 中的 -Q twse 概念一樣
@@ -194,7 +194,7 @@ services:
       POSTGRES_PASSWORD: postgres_password
       REDASH_COOKIE_SECRET: redash_cookie_secret
       REDASH_SECRET_KEY: redash_secret_key
-      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@postgres/postgres
+      REDASH_DATABASE_URL: postgresql://postgres:postgres_password@redash_postgres/postgres
       REDASH_ADDITIONAL_QUERY_RUNNERS: redash.query_runner.python
     volumes:
       - postgres:/var/lib/postgresql/data
