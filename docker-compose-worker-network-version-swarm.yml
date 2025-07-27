@@ -14,7 +14,7 @@ services:
       placement:
         # 設定在
         # node label crawler_twse = true 的機器上執行
-        constraints: [node.labels.crawler_twse == true]
+        constraints: [node.labels.crawler_twse==true]
     restart: always  # 若容器停止或崩潰，自動重新啟動
     environment:
       - TZ=Asia/Taipei  # 設定時區為台北（UTC+8）
@@ -34,7 +34,7 @@ services:
       placement:
         # 設定在
         # node label crawler_tpex = true 的機器上執行
-        constraints: [node.labels.crawler_tpex == true]
+        constraints: [node.labels.crawler_tpex==true]
     restart: always  # 若容器停止或崩潰，自動重新啟動
     environment:
       - TZ=Asia/Taipei  # 設定時區為台北（UTC+8）

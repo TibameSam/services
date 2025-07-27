@@ -13,7 +13,7 @@ services:
       placement:
         # 設定在
         # node label api = true 的機器上執行
-        constraints: [node.labels.api == true]
+        constraints: [node.labels.api==true]
 
     restart: always  # 若容器停止或崩潰，自動重新啟動
     environment:

@@ -22,7 +22,7 @@ services:
       mode: replicated
       replicas: 1
       placement:
-        constraints: [node.labels.redash == true]
+        constraints: [node.labels.redash==true]
     environment:
       PYTHONUNBUFFERED: 0
       # log 等級
@@ -62,7 +62,7 @@ services:
       mode: replicated
       replicas: 1
       placement:
-        constraints: [node.labels.redash == true]
+        constraints: [node.labels.redash==true]
     environment:
       PYTHONUNBUFFERED: 0
       REDASH_LOG_LEVEL: INFO
@@ -90,7 +90,7 @@ services:
       mode: replicated
       replicas: 1
       placement:
-        constraints: [node.labels.redash == true]
+        constraints: [node.labels.redash==true]
     environment:
       PYTHONUNBUFFERED: 0
       REDASH_LOG_LEVEL: INFO
@@ -121,7 +121,7 @@ services:
       mode: replicated
       replicas: 1
       placement:
-        constraints: [node.labels.redash == true]
+        constraints: [node.labels.redash==true]
     environment:
       PYTHONUNBUFFERED: 0
       REDASH_LOG_LEVEL: INFO
@@ -151,7 +151,7 @@ services:
       mode: replicated
       replicas: 1
       placement:
-        constraints: [node.labels.redash == true]
+        constraints: [node.labels.redash==true]
     environment:
       PYTHONUNBUFFERED: 0
       REDASH_LOG_LEVEL: INFO
@@ -178,7 +178,7 @@ services:
       mode: replicated
       replicas: 1
       placement:
-        constraints: [node.labels.redash == true]
+        constraints: [node.labels.redash==true]
     volumes:
       - redis-redash:/bitnami/redis/data
     networks:
@@ -202,7 +202,7 @@ services:
       mode: replicated
       replicas: 1
       placement:
-        constraints: [node.labels.redash == true]
+        constraints: [node.labels.redash==true]
     restart: always
     networks:
         - my_swarm_network
@@ -217,7 +217,7 @@ services:
       mode: replicated
       replicas: 1
       placement:
-        constraints: [node.labels.redash == true]
+        constraints: [node.labels.redash==true]
     networks:
         - my_swarm_network
 
