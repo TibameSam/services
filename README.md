@@ -70,7 +70,7 @@ http://127.0.0.1:9000
 
 ## create-network:
 	docker network create --scope=swarm --driver=overlay my_swarm_network
-	docker network create --scope=swarm --driver=overlay --attachable my_swarm_network
+	docker network create --scope=swarm --driver=overlay --attachable my_attachable_network
 
 ## deploy-mysql:
 	docker stack deploy --with-registry-auth -c mysql.yml mysql
