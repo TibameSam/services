@@ -23,10 +23,11 @@ services:
       - my_attachable_network               # 額外掛 attachable overlay，讓 DockerOperator 拉起的 standalone container 也能連到 rabbitmq
 
   flower:
-    image: mher/flower:0.9.5                # Flower 是 Celery 的 Web 監控工具
-    command: 
-      - "flower"
+    image: mher/flower:2.0                  # Flower 是 Celery 的 Web 監控工具（0.9.5 只有 amd64，Apple Silicon Mac 無法使用；2.0 支援 amd64 + arm64）
+    command:
+      - "celery"
       - "--broker=amqp://worker:worker@rabbitmq"
+      - "flower"
       - "--port=5555"
       # 使用環境變數中的 worker 帳號連接 rabbitmq broker
     ports:
