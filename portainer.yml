@@ -3,7 +3,7 @@ version: '3.2'  # 使用 Docker Compose v3.2，支援 Swarm 模式與 deploy 設
 services:
 
   agent:
-    image: portainer/agent              # 使用 Portainer 官方代理服務映像
+    image: portainer/agent:2.45.2              # 使用 Portainer 官方代理服務映像
     environment:
       AGENT_CLUSTER_ADDR: tasks.agent  # swarm 內部 DNS 名稱，用於服務發現（cluster 模式）
     volumes:
@@ -17,7 +17,7 @@ services:
         constraints: [node.platform.os==linux]  # 限定只部署在 Linux 節點上（排除 Windows 節點）
 
   portainer:
-    image: portainer/portainer-ce:2.0.1  # Portainer CE 2.0.1 版本
+    image: portainer/portainer-ce:2.45.2  # Portainer CE 2.45.2 版本
     command: -H tcp://tasks.agent:9001 --tlsskipverify
       # 連接到所有 agent 的 swarm DNS 名稱 `tasks.agent`，忽略 TLS 驗證（可強化）
     ports:
