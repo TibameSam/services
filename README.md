@@ -107,7 +107,7 @@ http://127.0.0.1:9000
 	sudo usermod -aG docker $USER
 
 ## 登入 docker
-	docker login -u linsamtw
+	docker login
 
 ## upload_taiwan_stock_price_to_mysql
 	DOCKER_IMAGE_VERSION=0.0.6 docker stack deploy --with-registry-auth -c docker-compose-upload_taiwan_stock_price_to_mysql.yml upload
