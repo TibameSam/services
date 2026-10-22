@@ -44,7 +44,7 @@ services:
       mode: replicated  # replicated 模式
       replicas: 1       # SQLite 為單機單檔，固定 1 個副本
       placement:
-        constraints: [node.role==manager]  # 部署於 manager 節點
+        constraints: [node.labels.superset==true]  # 部署於 manager 節點
       restart_policy:
         condition: on-failure  # 失敗時自動重啟
 
